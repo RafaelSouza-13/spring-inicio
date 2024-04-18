@@ -28,7 +28,7 @@ public class AulaApplication implements CommandLineRunner {
 			System.out.println("Encerrar programa - 2");
 			System.out.print("Digite uma opção: ");
 			int i = sc.nextInt();
-			System.out.println("");
+			System.out.println();
 			switch (i){
 				case 1:
 					System.out.print("Codigo do cliente: ");
@@ -38,9 +38,9 @@ public class AulaApplication implements CommandLineRunner {
 					System.out.print("Percentual de desconto: ");
 					double desconto = sc.nextDouble();
 					Order order = new Order(codigo, valor, desconto);
-					System.out.println("");
+					System.out.println();
 					System.out.println("Valor final: "+orderService.total(order));
-					System.out.println("");
+					System.out.println();
 					break;
 				case 2:
 					System.out.println("Encerrando o programa...");
@@ -48,7 +48,7 @@ public class AulaApplication implements CommandLineRunner {
 					break;
 				default:
 					System.out.println("Opção inválida");
-					System.out.println("");
+					System.out.println();
 					break;
 			}
 		}
