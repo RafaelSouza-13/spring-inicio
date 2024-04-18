@@ -14,8 +14,8 @@ public class OrderService {
         if(order.getBasic() < 100){
             return order.getBasic() + fare;
         }else if(order.getBasic() <= 200){
-            return (order.getBasic() * 0.8) + fare;
+            return order.getBasic() - (order.getBasic() * order.getDiscount() / 100) + fare;
         }
-        return (order.getBasic() * 0.9) + fare;
+        return order.getBasic() - (order.getBasic() * order.getDiscount() / 100) + fare;
     }
 }
